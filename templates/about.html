@@ -1,0 +1,126 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block navigation %}
+
+<ul class="navbar-nav d-flex align-items-center">
+    <li class="nav-item">
+      <a
+        href="{% url 'home' %}"
+        class="nav-link text-white text-nowrap"
+        >Главная</a
+      >
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'services' %}" class="nav-link text-white text-nowrap"
+        >Услуги</a
+      >
+    </li>
+    <li class="nav-item">
+      <a href="{% url 'about' %}" class="nav-link text-white nav-active-main text-nowrap"
+        >О нас</a
+      >
+    </li>
+</ul>
+
+{% endblock navigation %}
+
+{% block content %}
+
+Скоро!
+
+<section class="sc-form container">
+    <div class="title-box text-center">
+      <div class="content-wrapper">
+        <h3 class="title-box-name">Свяжитесь с нами</h3>
+        <div class="title-separator mx-auto"></div>
+        <p class="text title-box-text">
+          Заполните форму ниже и наши сотрудники свяжутся с вами в ближайшее
+          время
+        </p>
+        <p class="text title-box-text">
+          Или свяжитесь с нами через социальные сети или мессенджеры
+        </p>
+      </div>
+    </div>
+
+    <form class="form" method="POST" action="{% url 'about' %}">
+      {% csrf_token %}
+      <div class="text-field">
+        <div class="input-box">
+          <label class="text-field__label" for="name">Ваше имя</label>
+          <input
+            class="text-field__input text-field__input-info"
+            type="text"
+            name="user_name"
+          />
+        </div>
+        <div class="input-box">
+          <label class="text-field__label" for="email">Электронная почта</label>
+          <input
+            class="text-field__input text-field__input-info"
+            type="text"
+            name="user_email"
+          />
+        </div>
+
+        <div class="input-box">
+          <label class="text-field__label" for="text">Ваше сообщение</label>
+          <textarea
+            class="text-field__input text-field__input-text"
+            name="text"
+            cols="30"
+            rows="10"
+            placeholder="Напишите что-нибудь, если хотите..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-white-outline btn-form">
+          Отправить
+        </button>
+      </div>
+
+      <div class="info-field">
+        <div class="info-field-img">
+          <img src="{% static 'images/info-field-img.svg' %}" alt="" />
+        </div>
+
+        <div class="info-field-details">
+          <div class="address details">
+            <img src="{% static 'images/Location.svg' %}" alt="" />
+            <div class="text-one">Улица Мирзо Турсунзаде, 45</div>
+          </div>
+
+          <div class="phone details">
+            <img src="{% static 'images/Call.svg' %}" alt="" />
+            <a href="tel:+992 000502207"
+              ><div class="text-one">+992 000502207</div></a
+            >
+          </div>
+
+          <div class="email details">
+            <img src="{% static 'images/Mail.svg' %}" alt="" />
+            <a href="mailto:fazo@opps.space"
+              ><div class="text-one">fazo@opps.space</div></a
+            >
+          </div>
+        </div>
+
+        <div class="info-field-icons">
+          <a
+            class="info-field-icon"
+            href="https://www.facebook.com/share/XVhcJMAs7eDQgyXy/?mibextid=K35XfP"
+            ><img src="{% static 'images/facebook.svg' %}" alt=""
+          /></a>
+          <a class="info-field-icon" href="https://t.me/fazoinfo"
+            ><img src="{% static 'images/telegram.svg' %}" alt=""
+          /></a>
+          <a class="info-field-icon" href="https://wa.me/+79165716212"
+            ><img src="{% static 'images/whatsapp.svg' %}" alt=""
+          /></a>
+        </div>
+      </div>
+    </form>
+  </section>
+
+{% endblock content %}

@@ -1,0 +1,422 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фазои Имконот</title>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <!-- header starts -->
+      <header class="header">
+        <nav class="navbar">
+          <div class="container">
+            <div
+              class="navbar-content d-flex justify-content-between align-items-center"
+            >
+              <div
+                class="brand-and-toggler d-flex align-items-center justify-content-between"
+              >
+                <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
+                  <span class="brand-shape d-inline-block text-white">Ф</span>
+                  <span class="brand-text fw-7">Фазои Имконот</span>
+                </a>
+                <button type="button" class="d-none navbar-show-btn">
+                  <i class="fas fa-bars"></i>
+                </button>
+              </div>
+
+              <div class="navbar-box">
+                <button type="button" class="navbar-hide-btn">
+                  <i class="fas fa-times"></i>
+                </button>
+
+                <ul class="navbar-nav d-flex align-items-center">
+                  <li class="nav-item">
+                    <a
+                      href="{% url 'home' %}"
+                      class="nav-link text-white nav-active text-nowrap"
+                      >Главная</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'services' %}" class="nav-link text-white text-nowrap"
+                      >Услуги</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="{% url 'about' %}" class="nav-link text-white text-nowrap"
+                      >О нас</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" id="btn--contacts" class="nav-link text-white text-nowrap"
+                      >Контакты</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <div class="element-one">
+          <img src="{% static 'images/element-img-1.png' %}" alt="" />
+        </div>
+
+        <div class="banner">
+          <div class="container">
+            <div class="banner-content">
+              <div class="banner-left">
+                <div class="content-wrapper">
+                  <h1 class="banner-title">
+                    С заботой <br> о вас!
+                  </h1>
+                  <p class="text text-white">
+                    Свяжитесь с нами и получите бесплатную консультацию по вопросам здравоохранения
+                  </p>
+                  <a href="#" id="btn--header" class="btn btn-secondary">Связаться</a>
+                </div>
+              </div>
+
+              <div
+                class="banner-right d-flex align-items-center justify-content-end"
+              >
+                <img src="{% static 'images/banner-image.png' %}" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- header ends -->
+
+      <main>
+        <section class="sc-services">
+          <div class="services-shape">
+            <img src="{% static 'images/curve-shape-1.png' %}" alt="" />
+          </div>
+          <div class="container">
+            <div class="services-content">
+              <div class="title-box text-center">
+                <div class="content-wrapper">
+                  <h3 class="title-box-name">Наши услуги</h3>
+                  <div class="title-separator mx-auto"></div>
+                  <p class="text title-box-text">
+                    Мы предоставляем широкий выбор медицинских услуг от
+                    консультаций до логистического сопровождения.
+                  </p>
+                </div>
+              </div>
+
+              <div class="services-list">
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img src="{% static 'images/service-icon-1.png' %}" alt="service icon" />
+                  </div>
+                  <h5 class="item-title fw-7">Эпидемиология</h5>
+                  <p class="text">
+                    Мы предлагаем консультирование, помощь в технических
+                    вопросах и организацию деятельности в области эпидемиологии.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img src="{% static 'images/service-icon-2.png' %}" alt="service icon" />
+                  </div>
+                  <h5 class="item-title fw-7">Санитария и гигиена</h5>
+                  <p class="text">
+                    Наши услуги в области санитарии и гигиены включают
+                    консультации по созданию и реализации
+                    санитарно-гигиенических стандартов.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img src="{% static 'images/service-icon-3.png' %}" alt="service icon" />
+                  </div>
+                  <h5 class="item-title fw-7">Чрезвычайные ситуации</h5>
+                  <p class="text">
+                    Мы специализируемся на консультационной поддержке,
+                    технической помощи и организации логистических и
+                    организационных мероприятий в области реагирования на
+                    чрезвычайные ситуации в здравоохранении.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img src="{% static 'images/service-icon-4.png' %}" alt="service icon" />
+                  </div>
+                  <h5 class="item-title fw-7">Инфекционный контроль</h5>
+                  <p class="text">
+                    Мы осуществляем консультационное сопровождение по вопросам
+                    инфекционного контроля.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img src="{% static 'images/service-icon-5.png' %}" alt="service icon" />
+                  </div>
+                  <h5 class="item-title fw-7">Лабораторные системы</h5>
+                  <p class="text">
+                    Наши услуги в этой области включают организацию и
+                    логистическую поддержку в области лабораторной деятельности.
+                  </p>
+                </div>
+
+                <div class="services-item">
+                  <div class="item-icon">
+                    <img src="{% static 'images/service-icon-6.png' %}" alt="service icon" />
+                  </div>
+                  <h5 class="item-title fw-7">Продовольствие и безопасность</h5>
+                  <p class="text">
+                    Мы предоставляем услуги по консультированию и технической
+                    помощи в сфере безопасности пищевых продуктов.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="d-flex align-items-center justify-content-center services-main-btn"
+              >
+                <a href="{% url 'services' %}" class="btn btn-primary-outline">
+                  Подробнее
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sc-grid sc-grid-one">
+          <div class="container">
+            <div class="grid-content d-grid align-items-center">
+              <div class="grid-img">
+                <img src="{% static 'images/health-care-img.png' %}" alt="" />
+              </div>
+              <div class="grid-text">
+                <div class="content-wrapper text-start">
+                  <div class="title-box">
+                    <h3 class="title-box-name text-white">
+                      Поддержка и помощь
+                    </h3>
+                    <div class="title-separator mx-auto"></div>
+                  </div>
+
+                  <p class="text title-box-text text-white">
+                    Фазои Имконот - это общественная организация, созданная для
+                    поддержки сектора здравоохранения Республики Таджкикистан
+                  </p>
+                  <a href="{% url 'about' %}" class="btn btn-white-outline">
+                    Подробнее
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="sc-form container">
+          <div class="title-box text-center">
+            <div class="content-wrapper">
+              <h3 class="title-box-name">Свяжитесь с нами</h3>
+              <div class="title-separator mx-auto"></div>
+              <p class="text title-box-text">
+                Заполните форму ниже и наши сотрудники свяжутся с вами в
+                ближайшее время
+              </p>
+              <p class="text title-box-text">
+                Или свяжитесь с нами через социальные сети или мессенджеры
+              </p>
+            </div>
+          </div>
+
+          <form class="form" method="POST" action="/">
+            {% csrf_token %}
+            <div class="text-field">
+              <div class="input-box">
+                <label class="text-field__label" for="name">Ваше имя</label>
+                <input
+                  class="text-field__input text-field__input-info"
+                  type="text"
+                  name="user_name"
+                />
+              </div>
+              <div class="input-box">
+                <label class="text-field__label" for="email"
+                  >Электронная почта</label
+                >
+                <input
+                  class="text-field__input text-field__input-info"
+                  type="text"
+                  name="user_email"
+                />
+              </div>
+
+              <div class="input-box">
+                <label class="text-field__label" for="text"
+                  >Ваше сообщение</label
+                >
+                <textarea
+                  class="text-field__input text-field__input-text"
+                  name="text"
+                  cols="30"
+                  rows="10"
+                  placeholder="Напишите что-нибудь, если хотите..."
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-white-outline btn-form">
+                Отправить
+              </button>
+            </div>
+
+            <div class="info-field">
+              <div class="info-field-img">
+                <img src="{% static 'images/info-field-img.svg' %}" alt="" />
+              </div>
+
+              <div class="info-field-details">
+                <div class="address details">
+                  <img src="{% static 'images/Location.svg' %}" alt="" />
+                  <div class="text-one">
+                    Улица Мирзо Турсунзаде, 45
+                  </div>
+                </div>
+
+                <div class="phone details">
+                  <img src="{% static 'images/Call.svg' %}" alt="" />
+                  <a href="tel:+992 000502207"
+                    ><div class="text-one">+992 000502207</div></a
+                  >
+                </div>
+
+                <div class="email details">
+                  <img src="{% static 'images/Mail.svg' %}" alt="" />
+                  <a href="mailto:fazo@opps.space"
+                    ><div class="text-one">fazo@opps.space</div></a
+                  >
+                </div>
+              </div>
+
+              <div class="info-field-icons">
+                <a class="info-field-icon" href="https://www.facebook.com/share/XVhcJMAs7eDQgyXy/?mibextid=K35XfP"
+                  ><img src="{% static 'images/facebook.svg' %}" alt=""
+                /></a>
+                <a class="info-field-icon" href="https://t.me/fazoinfo"
+                  ><img src="{% static 'images/telegram.svg' %}" alt=""
+                /></a>
+                <a class="info-field-icon" href="https://wa.me/+79165716212"
+                  ><img src="{% static 'images/whatsapp.svg' %}" alt=""
+                /></a>
+              </div>
+            </div>
+          </form>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-list d-grid text-white">
+              <div class="footer-item">
+                <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
+                  <span class="brand-shape d-inline-block text-white">Ф</span>
+                  <span class="brand-text fw-7">Фазои Имконот</span>
+                </a>
+                <p class="text-white">
+                  Общественная организация Фазои Имконот обеспечивает поддержку
+                  медицинского сектора и предоставляет услуги консультации и
+                  логистического сопровождения.
+                </p>
+                <p class="text-white copyright-text">
+                  &copy; Фазои Имконот 2024. Все права защищены.
+                </p>
+              </div>
+
+              <div class="footer-item">
+                <h3 class="footer-item-title">Организация</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'about' %}">О нас</a></li>
+                  <li><a href="{% url 'services' %}">Услуги</a></li>
+                  <li><a href="#">Связаться</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-item">
+                <h3 class="footer-item-title">Помощь</h3>
+                <ul class="footer-links">
+                  <li><a href="#">Техническая поддержка</a></li>
+                  <li><a href="#">Контактная информация</a></li>
+                  <li><a href="#">Инструкции по использованию</a></li>
+                  <li><a href="#">Как это работает</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-element-1">
+          <img src="{% static 'images/element-img-4.png' %}" alt="" />
+        </div>
+        <div class="footer-element-2">
+          <img src="{% static 'images/element-img-5.png' %}" alt="" />
+        </div>
+      </footer>
+    </div>
+
+    <!-- jquery cdn -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.4.js"
+      integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+      crossorigin="anonymous"
+    ></script>
+    <!-- owl carousel -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!-- custom js -->
+    <script src="{% static 'js/script.js' %}"></script>
+  </body>
+</html>

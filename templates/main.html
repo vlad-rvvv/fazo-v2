@@ -1,0 +1,149 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Фазои Имконот</title>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="{% static 'css/main-style.css' %}" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- owl carousel -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- normalize.css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div class="page-wrapper">
+      <header class="header-main">
+        <nav class="navbar-main">
+            <div class="container">
+              <div
+                class="navbar-content d-flex justify-content-between align-items-center"
+              >
+                <div
+                  class="brand-and-toggler d-flex align-items-center justify-content-between"
+                >
+                  <a href="{% url 'home' %}" class="navbar-brand-main d-flex align-items-center">
+                    <span class="brand-shape d-inline-block text-white">Ф</span>
+                    <span class="brand-text fw-7">Фазои Имконот</span>
+                  </a>
+                  <button type="button" class="d-none navbar-show-btn-main">
+                    <i class="fas fa-bars"></i>
+                  </button>
+                </div>
+  
+                <div class="navbar-box">
+                  <button type="button" class="navbar-hide-btn">
+                    <i class="fas fa-times"></i>
+                  </button>
+
+                  {% block navigation %}
+
+                  {% endblock navigation %}
+                </div>
+              </div>
+            </div>
+        </nav>
+      </header>
+
+      {% block content %}
+      
+      {% endblock content %}
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer-content">
+            <div class="footer-list d-grid text-white">
+              <div class="footer-item">
+                <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
+                  <span class="brand-shape d-inline-block text-white">Ф</span>
+                  <span class="brand-text fw-7">Фазои Имконот</span>
+                </a>
+                <p class="text-white">
+                  Общественная организация Фазои Имконот обеспечивает поддержку
+                  медицинского сектора и предоставляет услуги консультации и
+                  логистического сопровождения.
+                </p>
+                <p class="text-white copyright-text">
+                  &copy; Фазои Имконот 2024. Все права защищены.
+                </p>
+              </div>
+
+              <div class="footer-item">
+                <h3 class="footer-item-title">Организация</h3>
+                <ul class="footer-links">
+                  <li><a href="{% url 'about' %}">О нас</a></li>
+                  <li><a href="{% url 'services' %}">Услуги</a></li>
+                  <li><a href="#">Связаться</a></li>
+                </ul>
+              </div>
+
+              <div class="footer-item">
+                <h3 class="footer-item-title">Помощь</h3>
+                <ul class="footer-links">
+                  <li><a href="#">Техническая поддержка</a></li>
+                  <li><a href="#">Контактная информация</a></li>
+                  <li><a href="#">Инструкции по использованию</a></li>
+                  <li><a href="#">Как это работает</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-element-1">
+          <img src="{% static 'images/element-img-4.png' %}" alt="" />
+        </div>
+        <div class="footer-element-2">
+          <img src="{% static 'images/element-img-5.png' %}" alt="" />
+        </div>
+      </footer>
+    </div>
+        <!-- jquery cdn -->
+        <script
+        src="https://code.jquery.com/jquery-3.6.4.js"
+        integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+        crossorigin="anonymous"
+        ></script>
+
+        <!-- owl carousel -->
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+        ></script>
+
+        <!-- custom js -->
+        <script src="{% static 'js/script-main.js' %}"></script>
+  </body>
+</html>
