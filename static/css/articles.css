@@ -1,0 +1,109 @@
+/* articles */
+.sc-articles{
+    position: relative;
+    padding: 108px 0 64.5px 0;
+}
+.articles-item{
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    border-radius: 20px;
+    background-color: var(--clr-white);
+    max-width: 350px;
+}
+.articles-list{
+    margin-right: -17px;
+    margin-left: -17px;
+    margin-top: 79px;
+}
+.articles-shape{
+    position: absolute;
+    right: 0;
+    top: 200px;
+    z-index: -1;
+}
+.articles-item{
+    width: calc(33.3333% - 34px);
+    overflow: hidden;
+    margin: 0 17px;
+    transition: var(--transition-default);
+}
+.articles-item:hover{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+.articles-item .item-img{
+    height: 246px;
+    overflow: hidden;
+}
+.articles-item .item-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.articles-item .item-body{
+    padding: 24px 33px 35px;
+}
+.articles-item .item-title{
+    font-weight: 700;
+    line-height: 1.52;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+.articles-item .text{
+    font-weight: 300;
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+.articles-item .item-link-text{
+    font-weight: 600;
+    font-size: 17px;
+}
+.articles-item .item-link-icon{
+    margin-left: 12px;
+}
+.articles-item .item-link:hover{
+    color: #1472f4;
+}
+.articles-content{
+    position: relative;
+}
+.articles-element{
+    position: absolute;
+    top: 105px;
+    left: -5px;
+    z-index: -1;
+}
+
+
+@media screen and (max-width: 992px){
+    /* articles */
+    .sc-articles{
+        padding: 100px 0;
+    }
+    .articles-content .articles-item{
+        width: calc(50% - 34px);
+        overflow: hidden;
+        margin: 17px;
+    }
+    .articles-shape{
+        width: 50%;
+    }
+    .articles-element{
+        top: 180px;
+        width: 60px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    /* articles */
+    .sc-articles{
+        padding: 80px 0;
+    }
+}
+
+@media screen and (max-width: 678px){
+    /* articles */
+    .articles-list .articles-item{
+        width: calc(100% - 34px);
+        overflow: hidden;
+        max-width: 100%;
+    }
+}

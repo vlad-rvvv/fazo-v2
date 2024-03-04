@@ -7,6 +7,7 @@
 @import "./grid.css";
 @import "./footer.css";
 @import "./form.css";
+@import "./articles.css";
 
 :root{
     --clr-blue: #458ff6;
